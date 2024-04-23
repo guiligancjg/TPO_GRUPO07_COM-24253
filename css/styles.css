@@ -1,0 +1,380 @@
+:root{
+    --fuenteHeader: "Merienda", cursive;
+    --fuenteHeaderSize: 2rem;
+
+    --colorFondoPagina: #eceff1;
+    --colorPrimario: #1A1C1B;
+    --colorSecundario: #4C4838;
+    --colorTerciario: #221E15;
+    --colorCuaternario: #ffbc0e;
+
+}
+
+
+/** Globales **/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem es igual a 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+body {
+    margin: 0rem;
+    font-family: var(--fuenteHeader);
+    background-color: var(--colorFondoPagina);
+   /* min-width: 400px;*/
+}
+
+/****************************************************/
+/* CONTENEDOR LOGO, MENU, LOGIN REGISTER DEL HEADER */
+.header {
+    background-color: var(--colorPrimario);
+    background-image: url(../img/header-izquierda.svg), url(../img/header-derecha.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right top;
+    background-size: contain, contain;
+    display: flex;
+    align-items: center;
+    padding: 3rem 5%;
+    height: 0.1rem;
+}
+
+@media only screen and (min-width: 576px) {
+    .header {
+        padding: 5rem 10%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header {
+        height: 14rem;
+        padding: 3rem 5%;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .header {
+        height: 17rem;
+        padding: 3rem 3%;
+        
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        height: 20rem;
+        padding: 3rem 3%;
+        
+    }
+}
+
+
+/****************************************************/
+/* HEADER LOGO   */
+
+
+.header .logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header .logo img{
+    height: 6rem;
+    width: auto;
+    transition: all 0.3s;
+}
+
+
+.header .logo span {
+    font-style: var(--fuenteHeader);
+    font-size: 1.2rem;
+    color: #eceff1;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (min-width: 768px) {
+    .header .logo img{
+        height: 7rem;
+    }
+
+    .header .logo span {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+
+}
+
+@media only screen and (min-width: 900px) {
+    .header .logo img{
+        height: 9rem;
+        
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .header .logo{
+        margin-left: 4rem;
+    }
+    .header .logo img{
+        height: 15rem;
+        
+    }
+
+
+}
+
+/****************************************************/
+/* BARRA DE NAVEGACIÓN HEADER nav-links */
+
+.nav-links {
+    display: none;
+}
+
+
+
+.menu svg {
+    height: 35px;
+    width: 35px;
+}   
+
+@media only screen and (min-width: 576px) {
+    .menu svg {
+        height: 44px;
+        width: 44px;
+    } 
+}
+
+
+@media only screen and (min-width: 900px) {
+    .nav-links {
+        margin: 0 auto;
+        display: block;
+        padding-right: 7rem;
+    }
+    .header .nav-links{
+        list-style: none;
+    }
+
+    .header .nav-links li{
+        display: inline-block;
+        padding: 0 2rem;    
+    }
+
+    .header .nav-links li:hover,
+    .overlay a:hover{
+        transform: scale(1.1);
+    }
+
+    .header .nav-links a {
+        font-size: 1.5rem;
+        color: #eceff1; 
+    }
+
+    .header .nav-links a:hover {
+        color: var(--colorCuaternario);
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .nav-links {
+        padding-right: 10rem;
+    }
+
+    .header .nav-links a {
+        font-size: 2rem;
+    }
+}
+
+/****************************************************/
+/* BOTONES INICIAR SESION Y REGISTRARTE*/
+
+.btn-header {
+    display: none;
+
+}
+
+.header-login {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .none-login {
+        display: none;
+    }
+
+    .header-login {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header .btn button {
+        margin: 1.2rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #eceff1;
+        background-color: var(--colorPrimario);
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    
+    .header .btn button:hover,
+    .header .menu svg:hover {
+        color: #ffbc0e;
+        transform: scale(1.1);
+    }
+
+
+    .btn-secundario button {
+        margin-right: 3rem;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #eceff1;
+        padding: 1.5rem 2rem;
+        background-color: var(--colorSecundario);
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .btn-secundario button:hover {
+        color: #ffbc0e;
+        transform: scale(1.1);
+    }
+
+    .btn-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-login {
+        display: flex;
+        align-items: center;
+    }
+    .header .btn button {
+        font-size: 1.1rem;
+    }
+
+    .btn-secundario button {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .btn-secundario button {
+        margin-right: 0rem;
+        
+    }
+
+    .header .btn button {
+        margin: 0;
+        
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .none-login {
+        display: block;
+        width: 8rem;
+        
+    }
+    .header .btn button {
+        margin: 1.2rem;
+    }
+}
+
+/****************************************************/
+/* Barra de Navegación Header "Movile"*/
+
+.header a {
+    text-decoration: none;  
+}
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.header .overlay a{
+    padding: 1.5rem;
+    font-size: 3.6rem;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.header .overlay a:hover, 
+.header .overlay a:focus{
+    color: #ffbc0e;
+}
+
+.header .overlay .close{
+    position: absolute;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 6.5rem;
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay a{
+        font-size: 2rem;
+    }
+    .header .overlay .close{
+        font-size: 4rem;
+        top: 1.5rem;
+        right: 3.5rem;
+    }
+}
+
+/**************************************************/
+/* CONTENEDOR PAGINA WEB */
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
