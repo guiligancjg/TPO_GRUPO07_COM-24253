@@ -16,13 +16,13 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo">
+        <div class="header__logo">
           <!---->
           <img src="img/logo.svg" alt="Logo de la marca" />
           <span>Ristorante Bella Italia</span>
         </div>
-        <nav>
-          <ul class="nav-links">
+        <nav class="header__nav">
+          <ul>
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Menús</a></li>
             <li><a href="#">Delivery</a></li>
@@ -30,9 +30,9 @@
           </ul>
         </nav>
   
-        <div class="header-login">
-          <a class="btn" href="#">
-            <button class="btn-header">
+        <div class="header__login">
+          <a href="#">
+            <button class="boton-login" title="Iniciar Sesión">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="icon icon-tabler icon-tabler-user"
@@ -49,12 +49,12 @@
                 <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
               </svg>
-              <span class="none-login">Iniciar Sesión</span>
+              <span class="boton-login__texto">Iniciar Sesión</span>
             </button>
           </a>
   
-          <a class="btn-secundario" href="#">
-            <button>
+          <a href="#">
+            <button class="boton-registrate">
               <span>Regístrate</span>
             </button>
           </a>
@@ -101,7 +101,7 @@
           </div>
           <!---->
         </div>
-      </header>
+    </header>
   
       <!---->
       <script type="text/javascript" src="js/script.js"></script>   
