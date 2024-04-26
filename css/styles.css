@@ -66,7 +66,7 @@ body {
 @media only screen and (min-width: 1200px) {
     .header {
         height: 20rem;
-        padding: 3rem 3%;
+        padding: 1rem 3%;
         
     }
 }
@@ -105,6 +105,10 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+    .header .logo{
+        margin-left: 8rem;
+    }
+
     .header .logo img{
         height: 7rem;
     }
@@ -121,6 +125,10 @@ body {
 }
 
 @media only screen and (min-width: 900px) {
+    .header .logo{
+        margin-left: 9rem;
+    }
+
     .header .logo img{
         height: 9rem;
         
@@ -132,7 +140,7 @@ body {
 
 @media only screen and (min-width: 1200px) {
     .header .logo{
-        margin-left: 4rem;
+        margin-left: 9rem;
     }
     .header .logo img{
         height: 15rem;
@@ -168,7 +176,7 @@ body {
     .nav-links {
         margin: 0 auto;
         display: block;
-        padding-right: 7rem;
+        padding-left: 4rem;
     }
     .header .nav-links{
         list-style: none;
@@ -185,7 +193,7 @@ body {
     }
 
     .header .nav-links a {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         color: #eceff1; 
     }
 
@@ -201,7 +209,7 @@ body {
 
 @media only screen and (min-width: 1200px) {
     .nav-links {
-        padding-right: 10rem;
+        padding-right: 4rem;
     }
 
     .header .nav-links a {
