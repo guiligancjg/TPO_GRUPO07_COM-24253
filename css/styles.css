@@ -146,12 +146,15 @@ body {
         height: 15rem;
         
     }
-
+    
+    .header .header__logo span {
+        font-size: 2rem;
+    }
 
 }
 
 /****************************************************/
-/* BARRA DE NAVEGACIÓN HEADER nav-links */
+/* BARRA DE NAVEGACIÓN HEADER */
 
 .header__nav {
     display: none;
@@ -334,17 +337,39 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;    
+    justify-content: flex-start;    
+    width: 90%;
+    margin: 0 auto;
 }
 
 .header .overlay a{
     padding: 1.5rem;
-    font-size: 3.6rem;
-    display: block;
+    font-size: 2.5rem;
+    display: inline;
     transition: all 0.3s ease 0s;
     font-weight: 700;
     color: #eceff1;
+}
+
+.header .overlay .overlay-content img {
+    height: 10rem;
+    width: auto;
+    
+}
+
+.header .overlay .overlay-content span {
+    height: 3rem;
+    font-size: 2rem;
+    color: #eceff1;
+    text-align: center;
+    
+    
+}
+
+.header .overlay .overlay-content hr {
+    width: 30rem;
+    border: 1px solid #7a7a79;
+   
 }
 
 .header .overlay a:hover, 
@@ -354,9 +379,9 @@ body {
 
 .header .overlay .close{
     position: absolute;
-    top: 2rem;
-    right: 4.5rem;
-    font-size: 6.5rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
 }
 
 @media screen and (max-height:450px) {
