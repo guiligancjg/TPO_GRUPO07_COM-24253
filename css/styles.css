@@ -333,6 +333,7 @@ body {
     transition: all 0.3s ease 0s;
 }
 
+
 .header .overlay .overlay-content{
     display: flex;
     flex-direction: column;
@@ -355,14 +356,13 @@ body {
     height: 10rem;
 }
 
-.header .overlay .overlay-content span {
+.overlay-content__titulo {
     height: 3rem;
     font-size: 2rem;
     color: #eceff1;
     text-align: center;
-    
-    
 }
+
 
 .header .overlay .overlay-content hr {
     width: 95%;
