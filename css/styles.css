@@ -388,6 +388,41 @@ body {
 .mobile-menu {
     width: 0;
 }
+
+
+.movile-login {
+    display: block;    
+}
+
+.movile-login__Iniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.movile-login__Registrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+@media only screen and (min-width: 576px) {
+    .movile-login {
+        display: block;    
+    }
+}
+@media only screen and (min-width: 768px) {
+    .movile-login {
+        display: none;    
+    }
+
+}
+
+
 /*
 .header .overlay .close{
     position: absolute;
