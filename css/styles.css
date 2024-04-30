@@ -433,14 +433,14 @@ body {
 }
 
 
-@media only screen and (min-width: 576px) {
-    .movile-login {
-        display: block;    
-    }
-}
+
 @media only screen and (min-width: 768px) {
-    .movile-login {
-        display: none;    
+    .overlay-content__login {
+        display: none;
+    }
+    
+    .overlay-content__registrar {
+        display: none;
     }
 
 }
