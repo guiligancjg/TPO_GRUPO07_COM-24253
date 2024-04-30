@@ -508,7 +508,7 @@ body {
 .centrar-texto__navegacion {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 1rem;
     
 }
@@ -699,6 +699,7 @@ body {
 
     .centrar-texto__navegacion {
         font-size: 2rem;
+        gap: 2rem;
         
     }
 
