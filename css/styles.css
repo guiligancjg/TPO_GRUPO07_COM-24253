@@ -390,23 +390,46 @@ body {
 }
 
 
-.movile-login {
-    display: block;    
+.overlay-content__login {
+    display: flex;
+    align-items: center;    
+}
+
+.overlay-content__registrar {
+    display: flex;
+    align-items: center;
 }
 
 .movile-login__Iniciar {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    
 }
 
 .movile-login__Registrar {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
+
+}
+
+.overlay-content__nosotros {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-content__menu {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-content__delivery {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-content__contacto {
+    display: flex;
+    align-items: center;
 }
 
 
