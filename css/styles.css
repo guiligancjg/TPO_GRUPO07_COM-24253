@@ -505,15 +505,15 @@ body {
     padding: 0.5rem;
 }
 .centrar-texto__navegacion {
-    
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     font-size: 1rem;
     
 }
 
 .centrar-texto__navegacion a {
     color: #252323;
-    padding-left: 1rem;
     text-decoration: none;
     
 }
