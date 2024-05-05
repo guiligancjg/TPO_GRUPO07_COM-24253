@@ -9,6 +9,7 @@
     --colorSecundario: #4C4838;
     --colorTerciario: #221E15;
     --colorCuaternario: #ffbc0e;
+    --colorDorado: #a28b09;
 
 }
 
@@ -471,8 +472,214 @@ body {
 
 /**************************************************/
 /* CONTENEDOR PAGINA WEB */
+/*************************************************/
 
 
+/* INICIO CAROUSEL*/
+
+.carousel-section {
+    height: 50vh; 
+    overflow: hidden; 
+}
+.carousel-item img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del carousel */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto del carousel */
+    object-fit: contain; /* Ajusta y recorta la imagen para llenar el espacio del carousel */
+}
+
+@media (max-width: 768px) {
+    .carousel-section {
+        height: 20vh; /* Ajusta la altura automáticamente en dispositivos móviles */
+        min-height: 20vh; /* Altura mínima del carousel en dispositivos móviles */
+        overflow: hidden;
+    }
+}
+
+/* FIN DE CAROUSEL*/
+
+
+/* INICIO BIENVENIDOS*/
+
+.bienvenidos-contenedor {
+    display: flex;
+    margin: 5em; 
+}
+
+.bienvenidos-contenedor .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1200px;
+    width: 100%; 
+    /*justify-content: center;*/
+        
+}
+
+.bienvenidos-textos{
+
+    max-width: 50%;
+    padding: 3em;
+}
+
+.bienvenidos-textos h2 {
+    font-size: 4em;
+    color: var(--colorDorado);
+    margin-bottom: 1em;
+ }
+
+ .bienvenidos-textos h3 {
+    font-size: 2.2em;
+    color: var(--colorSecundario);
+    line-height: 1.5em;
+ }
+
+ .bienvenidos-textos p {
+    font-size: 1.8em;
+    color: var(--colorSecundario);
+    line-height: 1em;
+ }
+
+.bienvenidos-contenedor img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+
+    .bienvenidos-contenedor {
+        display: flex;
+        margin: 1em; 
+    }
+
+    .bienvenidos-contenedor .container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        max-width: 100%;
+     padding: 3em;
+}
+
+.bienvenidos-textos{
+
+    max-width: 100%;
+    padding: 3em;
+}
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .bienvenidos-contenedor .container {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+    }
+
+}
+
+
+/* FIN BIENVENIDOS*/
+
+
+/* INICIO MENUS Home*/
+
+
+
+.menus-items{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+}
+
+.menus-item_individual{
+
+}
+
+.menus-item_individual h2{
+    background-color: #151718;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5em;
+   
+}
+
+.menus-item_individual img{
+    max-width: 100%; 
+    max-height: 100%;
+    display: block; 
+    margin: 0 auto;
+}
+
+
+@media (max-width: 1024px) {
+    .menus-items {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (max-width: 767px) {
+    .menus-items {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .menus-item_individual{
+
+      padding:0em 5em 0em 5em;
+    }
+
+    .menus-item_individual img{
+        width: 100%; 
+        display: block; 
+        margin: 0 auto;
+        height: 200px; 
+        object-fit: cover; 
+    }
+
+    .menus-item_individual h2{
+        background-color: #151718;
+        color: #ffffff;
+        text-align: center;
+        padding: 1.5em;
+       
+    }
+}
+
+
+/* FIN MENUS Home*/
+
+/* INICIO MAPA*/
+
+.ubicacion-mapa{
+
+    width: 100%; 
+    height: 350px; 
+    position: relative; 
+    overflow: hidden; 
+
+}
+
+/* FIN MAPA*/
+
+/**************************************************/
+
+
+/* INICIO FOOTER*/
+
+.footer-text{
+    font-size: 2em;
+    color: #eceff1;
+}
+
+/*.custom-brand-width {
+    width: 550px; 
+}*/
+
+
+
+/* FIN FOOTER*/
 
 
 /**************************************************/
