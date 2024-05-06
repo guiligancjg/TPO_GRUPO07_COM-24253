@@ -712,7 +712,7 @@ body {
     }
 
     .formulario__titulo {
-        font-size: 2rem;
+        font-size: 2.1rem;
         
     }
 
@@ -742,6 +742,12 @@ body {
     .formulario {
         width: 65%;
     
+    }
+
+    
+    .formulario__titulo {
+        font-size: 2.4rem;
+        
     }
 
 }
