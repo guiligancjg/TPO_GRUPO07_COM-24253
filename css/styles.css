@@ -633,14 +633,7 @@ body {
 }
 
 
-.menus-item_individual:not(:hover){
-    transition-duration: 200ms;
-}
 
-.menus-item_individual:hover{
-    transition-duration: 300ms;
-    transform: scale(1.1);
-}
 
 .menus-item_individual h2{
     background-color: #151718;
@@ -657,6 +650,18 @@ body {
     display: block; 
     margin: 0 auto;
 }
+
+@media (min-width: 576px) {
+    .menus-item_individual:not(:hover){
+        transition-duration: 200ms;
+    }
+    
+    .menus-item_individual:hover{
+        transition-duration: 300ms;
+        transform: scale(1.1);
+    }
+}
+    
 
 
 @media (max-width: 1024px) {
