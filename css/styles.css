@@ -50,6 +50,7 @@ body {
         padding: 5rem 10%;
     }
 }
+
 @media only screen and (min-width: 768px) {
     .header {
         height: 14rem;
@@ -478,19 +479,34 @@ body {
 /* INICIO CAROUSEL*/
 
 .carousel-section {
-    height: 50vh; 
     overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    
 }
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16' width='40' height='40'%3e%3cpath d='M11.354 8l-4.5-4.5a.5.5 0 0 1 .708-.708l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 1 1-.708-.708L11.354 8z'/%3e%3c/svg%3e");
+    width: 40px;
+    height: 40px;
+  }
+
+
+.carousel-control-prev-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    width: 35px;
+    height: 35px;
+  }  
+
 .carousel-item img {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del carousel */
     height: 100%; /* Asegura que la imagen ocupe todo el alto del carousel */
     object-fit: contain; /* Ajusta y recorta la imagen para llenar el espacio del carousel */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+
     .carousel-section {
-        height: 20vh; /* Ajusta la altura automáticamente en dispositivos móviles */
-        min-height: 20vh; /* Altura mínima del carousel en dispositivos móviles */
+        max-height: 50rem;
         overflow: hidden;
     }
 }
@@ -502,24 +518,23 @@ body {
 
 .bienvenidos-contenedor {
     display: flex;
-    margin: 5em; 
+    padding: 0;
 }
 
+
 .bienvenidos-contenedor .container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    max-width: 1200px;
-    width: 100%; 
-    /*justify-content: center;*/
-        
+    padding-top: 2rem;
+
 }
 
 .bienvenidos-textos{
-
-    max-width: 50%;
-    padding: 3em;
+    padding: 0 1rem 0 1rem;
+    font-size: 0.7rem;
+    text-align: center;
 }
+
+
+
 
 .bienvenidos-textos h2 {
     font-size: 4em;
@@ -543,41 +558,64 @@ body {
     max-width: 100%; 
     height: auto; 
     display: block; 
-    margin: 0 auto; 
+    margin: 1rem auto; 
 }
 
-@media (max-width: 768px) {
+
+
+@media only screen and (min-width: 768px) {
 
     .bienvenidos-contenedor {
         display: flex;
         margin: 1em; 
+        padding-bottom: 1rem;
+        padding-top: 1rem;
     }
 
-    .bienvenidos-contenedor .container {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        max-width: 100%;
-     padding: 3em;
-}
-
-.bienvenidos-textos{
-
-    max-width: 100%;
-    padding: 3em;
-}
-    }
-
-@media (min-width: 768px) and (max-width: 1024px) {
     .bienvenidos-contenedor .container {
         display: flex;
         flex-direction: row; 
-        justify-content: space-between; 
+        align-items: center; 
+        max-width: 100%;
+        padding: 0;
     }
 
-}
+        .bienvenidos-textos{
+            max-width: 50%;
+            padding: 0 1.5rem 0 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            
+        }
+    }
 
 
+    @media only screen and (min-width: 900px) {
+        .bienvenidos-contenedor .container {
+            max-width: 100%;
+
+        }
+        .bienvenidos-textos{
+            font-size: 0.9rem;
+            
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .bienvenidos-contenedor .container {
+            align-items: center;
+            justify-content: space-around;
+
+            max-width: 100%;
+            padding: 0;
+        }
+        .bienvenidos-textos{
+            font-size: 1.2rem;
+            max-width: 50%;
+            
+        }
+
+    }
 /* FIN BIENVENIDOS*/
 
 
@@ -591,11 +629,17 @@ body {
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-
+    
 }
 
-.menus-item_individual{
 
+.menus-item_individual:not(:hover){
+    transition-duration: 200ms;
+}
+
+.menus-item_individual:hover{
+    transition-duration: 300ms;
+    transform: scale(1.1);
 }
 
 .menus-item_individual h2{
@@ -603,6 +647,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 1.5em;
+    
    
 }
 
@@ -626,8 +671,7 @@ body {
         grid-template-columns: repeat(1, 1fr); 
     }
     .menus-item_individual{
-
-      padding:0em 5em 0em 5em;
+        padding-top: 1rem 0.5rem 0 0.5rem;
     }
 
     .menus-item_individual img{
