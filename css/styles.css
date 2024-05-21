@@ -521,27 +521,36 @@ body {
 
 .bienvenidos-contenedor {
     display: flex;
-    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3rem;
+    background-color: var(--colorSecundario);
+    margin: 2rem 0 2rem 0;
+
 }
 
-
-.bienvenidos-contenedor .container {
+.bienvenidos-contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
     padding-top: 2rem;
 
 }
 
 .bienvenidos-textos{
+    flex: 0 0 40%;
     padding: 0 1rem 0 1rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
 }
 
-
-
-
 .bienvenidos-textos h2 {
     font-size: 4em;
-    color: var(--colorDorado);
+    color: white;
     margin-bottom: 1em;
  }
 
@@ -549,77 +558,81 @@ body {
     font-size: 2.2em;
     color: var(--colorSecundario);
     line-height: 1.5em;
+    color: white
  }
 
  .bienvenidos-textos p {
     font-size: 1.8em;
     color: var(--colorSecundario);
     line-height: 1em;
+    color: white;
+    line-height: 1.7em;
  }
 
-.bienvenidos-contenedor img {
+.bienvenidos-contenido img {
     max-width: 100%; 
     height: auto; 
     display: block; 
     margin: 1rem auto; 
+    border: 10px solid var(--colorDorado);}
+
+
+@media only screen and (max-width: 1200px) {
+    .bienvenidos-contenido {
+        flex-direction: column; 
+    }
+
+    .bienvenidos-textos {
+        font-size: 1.5em;
+    }
+
+    .bienvenidos-textos h2 {
+        font-size: 3em;
+    }
+
+    .bienvenidos-textos h3 {
+        font-size: 2em;
+    }
+
+    .bienvenidos-textos p {
+        font-size: 1.5em;
+    }
+
+    .bienvenidos-imagen img {
+        max-width: 70%;
+    }
 }
 
 
-
-@media only screen and (min-width: 768px) {
-
-    .bienvenidos-contenedor {
-        display: flex;
-        margin: 1em; 
-        padding-bottom: 1rem;
-        padding-top: 1rem;
+@media only screen and (max-width: 768px) {
+    .bienvenidos-contenido {
+        flex-direction: column; 
     }
 
-    .bienvenidos-contenedor .container {
-        display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        max-width: 100%;
-        padding: 0;
+    .bienvenidos-textos {
+        font-size: 1em;
+        padding: 0.5rem;
     }
 
-        .bienvenidos-textos{
-            max-width: 50%;
-            padding: 0 1.5rem 0 1.5rem;
-            text-align: center;
-            font-size: 0.8rem;
-            
-        }
+    .bienvenidos-textos h2 {
+        font-size: 2em;
     }
 
-
-    @media only screen and (min-width: 900px) {
-        .bienvenidos-contenedor .container {
-            max-width: 100%;
-
-        }
-        .bienvenidos-textos{
-            font-size: 0.9rem;
-            
-        }
+    .bienvenidos-textos h3 {
+        font-size: 1.5em;
     }
 
-    @media only screen and (min-width: 1200px) {
-        .bienvenidos-contenedor .container {
-            align-items: center;
-            justify-content: space-around;
-
-            max-width: 100%;
-            padding: 0;
-        }
-        .bienvenidos-textos{
-            font-size: 1.2rem;
-            max-width: 50%;
-            
-        }
-
+    .bienvenidos-textos p {
+        font-size: 1.2em;
     }
+
+    .bienvenidos-imagen img {
+        max-width: 70%;
+    }
+}
+
 /* FIN BIENVENIDOS*/
+
 
 
 /* INICIO MENUS Home*/
@@ -1725,4 +1738,171 @@ body {
       }
 }
 
+/**************************************************/
+/*  INICIO PAGINA NOSOTROS */
 
+
+.titulo-nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c7cbce;
+    font-size: 3em;
+    margin-bottom: 2rem;
+  }
+  
+  .nosotros-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+.nosotros-contenido{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    width: 80%; 
+    max-width: 1200px; 
+}
+
+/* Estilo para los ítems del grid */
+.nosotros-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.nosotros-item img {
+    width: 100%; 
+    height: auto; 
+    max-width: 20vw; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.nosotros-item p{
+
+    font-size: 1.5em;
+    line-height: 1.5em;
+
+}
+
+@media (max-width: 768px) {
+    .nosotros-contenido {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nosotros-item img {
+        width: 100%; 
+    height: auto; 
+    max-width: 100vw;
+    display: block; 
+    margin: 0 auto; 
+    }
+}
+
+  /*  FIN PAGINA NOSOTROS */
+
+
+/**************************************************/
+/*  INICIO PAGINA MENUS */
+
+
+.menus-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c7cbce;
+    font-size: 3em;
+    margin-bottom: 2rem;
+  }
+  
+  .menus-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+.menus-contenido{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    width: 80%; 
+    max-width: 1200px; 
+}
+
+/* Estilo para los ítems del grid */
+.menus-item {
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.menus-item img {
+    background-color: var(--colorDorado);
+    padding: 1em;
+    width: 100%; 
+    height: auto; 
+    max-width: 40vw; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.menus-item p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 1em;
+    text-align: center;
+}
+
+.menus-item h2{
+    font-size: 2.5em;
+    line-height: 1em;
+    text-align: center;
+    color: var(--colorDorado);
+}
+
+.menus-separador {
+    padding: 20px; 
+    text-align: center;
+}
+
+.menus-separador img {
+        width: auto;
+    max-width: 50%; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    .menus-contenido {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .menus-item img {
+        width: 100%; 
+    height: auto; 
+    max-width: 100vw;
+    display: block; 
+    margin: 0 auto; 
+    }
+}
+
+  /*  FIN PAGINA MENUS */
