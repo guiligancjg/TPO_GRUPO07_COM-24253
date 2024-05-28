@@ -834,7 +834,6 @@ body {
 
 .hr2 {
     width: 20%;
-    height: 0.3rem;
     margin: 0;
 }
 
@@ -1752,6 +1751,13 @@ body {
 /**************************************************/
 /*  INICIO PAGINA NOSOTROS */
 
+.nosotros-bg {
+    background-image: url(../img/blu.webp);
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
 
 .titulo-nosotros{
     display: flex;
@@ -1818,6 +1824,37 @@ body {
     display: block; 
     margin: 0 auto; 
     }
+}
+
+@media only screen and (min-width: 576px) { 
+    .nosotros-bg {
+        height: 25rem;
+     }
+}
+
+@media only screen and (min-width: 768px) {
+    .nosotros-bg {
+        height: 35rem;
+     }
+}
+
+@media only screen and (min-width: 900px) {
+    .nosotros-bg {
+        height: 40rem;
+     }
+}
+
+@media only screen and (min-width: 1200px) { 
+    .nosotros-bg {
+        height: 50rem;
+     }
+}
+
+
+@media only screen and (min-width: 1900px) { 
+    .nosotros-bg {
+        height: 50rem;
+     }
 }
 
   /*  FIN PAGINA NOSOTROS */
@@ -1917,3 +1954,46 @@ body {
 }
 
   /*  FIN PAGINA MENUS */
+
+
+/**************************************************/
+/* PAGINA MENUS */
+
+.menus-bg {
+    background-image: url(../img/pizza-a-la-parrilla-funghi.webp);
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+ @media only screen and (min-width: 576px) {
+    .menus-bg {
+        height: 25rem;
+     } 
+ }
+
+ @media only screen and (min-width: 768px) { 
+    .menus-bg {
+        height: 35rem;
+     } 
+ }
+
+
+ @media only screen and (min-width: 900px) {
+    .menus-bg {
+        height: 40rem;
+     } 
+ }
+
+ @media only screen and (min-width: 1200px) {
+    .menus-bg {
+        height: 50rem;
+     }
+ }
+
+ @media only screen and (min-width: 1900px) { 
+    .menus-bg {
+        height: 50rem;
+     }
+ }
+/**************************************************/
