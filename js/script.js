@@ -94,3 +94,53 @@ function contacFormularioDelivery() {
 
 
 contacFormularioDelivery();
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("login-form");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Evita el comportamiento por defecto del formulario
+
+        // Muestra el loader
+        document.querySelector(".contact-form-loader").classList.remove("none");
+
+        // Oculta la respuesta anterior
+        document.querySelector(".contact-form-response").classList.add("none");
+
+        // Obtén los datos del formulario
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log(data);
+
+        try {
+            // Envía los datos al servidor
+            const response = await fetch("http://localhost:3000/user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            // Verifica si la solicitud fue exitosa
+            if (!response.ok) {
+                throw new Error("Error en la solicitud");
+            }
+
+            // Muestra el mensaje de éxito
+            document.querySelector(".contact-form-response").classList.remove("none");
+
+        } catch (error) {
+            // Muestra un mensaje de error
+            alert("Hubo un problema con el envío del formulario: " + error.message);
+        } finally {
+            // Oculta el loader
+            document.querySelector(".contact-form-loader").classList.add("none");
+        }
+    });
+});

@@ -29,7 +29,7 @@
   
         <div class="header__login">
 
-          <a href="#">
+          <a href="login.html">
             <div class="boton-login" title="Iniciar Sesión">
               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="35" height="35"
                 viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
@@ -145,7 +145,7 @@
                     <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                     <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                   </svg>
-                  <a href="#">Iniciar Sesión</a>
+                  <a href="login.html">Iniciar Sesión</a>
             </div>
 
 
@@ -169,66 +169,73 @@
           <h3 class="centrar-texto">Menús</h3>
           <div class="centrar-texto__navegacion">
             <a href="index.html">Inicio</a>
-            <a href="./menus.html">Menús</a>
+            <a href="./login.html">Inicio de sesión</a>
           </div>
         </div>
     
-        <div class="menus-bg"></div>
+        <div class="menus-bg">   
+        </div>
         
-        <div class="delivery-contenedor">
-    
-          <div class="titulo-menus">
-            Nuestras Especialidades
-            <br>
+
+        <form id="login-form" class="formulario-delivery fondo-contacto">
+          <p class="formulario__titulo">"Bienvenido/a a nuestro servicio. Por favor, inicia sesión para continuar o <a style="color: blueviolet;" href="regiter.html">regístrate</a> para crear una nueva cuenta."</p>
+          <div class="formulario__detalle">
+          <hr class="formulario__titulo--hr1"><hr class="formulario__titulo--hr2">
           </div>
-    
-         
-            <section class="menus-contenedor">
-              <div class="menus-contenido">
-                  <div class="menus-item"><img src="./img/bruschetta.webp" alt="bruschetta"></div>
-                  <div class="menus-item">
-                  <h2>Bruschettas</h2>
-                   <p> Descubre nuestra selección de deliciosas bruschettas, perfectas para comenzar tu experiencia gastronómica en Ristorante Giardino. Preparadas con los ingredientes más frescos y servidas sobre pan crujiente, nuestras bruschettas son el equilibrio perfecto entre tradición y sabor.
-                  </p>
-                  </div>
-               </div>
-               <div class="menus-separador"><img src="./img/separador.png" alt="separador"></div>
-              
-               <div class="menus-contenido">
-                <div class="menus-item"><img src="./img/gnocchi-y-zapallo.webp" alt="Gniocchi con flores de zapallo"></div>
-                <div class="menus-item">
-                <h2>Gnocchi con flores de zapallo</h2>
-                 <p>Deléitate con nuestro exquisito plato de gnocchi con flores de zapallo, una combinación perfecta de tradición y frescura. Los suaves y esponjosos gnocchi se mezclan con delicadas flores de zapallo, todo bañado en una salsa ligera de mantequilla y salvia, que resalta los sabores naturales y la elegancia de este plato. 
-                </p>
-                </div>
-             </div>
-             <div class="menus-separador"><img src="./img/separador.png" alt="separador"></div>
-  
-             <div class="menus-contenido">
-              <div class="menus-item"><img src="./img/antipasto-aceitunas.webp" alt="Antipasti Italiano"></div>
-              <div class="menus-item">
-              <h2>Antipasti</h2>
-               <p> Disfruta de un crujiente pan de pizza acompañado de cremoso roquefort, intensa olivas negras, y nuestro delicado Jamón de Parma. Completa esta experiencia con una variedad de quesos finamente seleccionados, cada uno aportando su carácter único y armonizando a la perfección con los demás ingredientes
-              </p>
+          <div class="nombre-form">
+                
+              <div class="iconos-input">
+                <input type="email" name="email" placeholder="E-mail" title="Ingresa un Email valido"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                  <svg class="posicion-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail"
+                  width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                  <path d="M3 7l9 6l9 -6" />
+                </svg>
               </div>
-           </div>
-           <div class="menus-separador"><img src="./img/separador.png" alt="separador"></div>
-          
-           <div class="menus-contenido">
-            <div class="menus-item"><img src="./img/pizza-de-hongos.webp" alt="Pizza ai Funghi"></div>
-            <div class="menus-item">
-            <h2>Pizza ai Funghi</h2>
-             <p>Con una base de salsa de tomate fresca y queso mozzarella fundido que sirve como lienzo para una variedad exquisita de hongos. Desde los suaves champiñones hasta las delicadas setas de ostra y las robustas girgolas, cada ingrediente se combina para crear una experiencia gastronómica inolvidable. Rematada con un toque de aceite de oliva virgen extra y hojas de albahaca fresca.
-            </p>
-            </div>
-         </div>
-         <div class="menus-separador"><img src="./img/separador.png" alt="separador"></div>
-        
-            
-               
   
-          </section>
-          </div>
+                <div class="iconos-input">
+                  <input type="password" name="password" placeholder="Contraseña" title="Ingrese su contraseña"
+                     required>
+    
+                 <svg  class="posicion-icon"  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-password" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 10v4" />
+                    <path d="M10 13l4 -2" />
+                    <path d="M10 11l4 2" />
+                    <path d="M5 10v4" />
+                    <path d="M3 13l4 -2" />
+                    <path d="M3 11l4 2" />
+                    <path d="M19 10v4" />
+                    <path d="M17 13l4 -2" />
+                    <path d="M17 11l4 2" />
+                  </svg>
+                </div>
+            </div>
+           
+            
+            <div class="campo">
+                
+               
+            </div>
+  
+            <div class="campo">
+                <input type="submit" value="Aceptar" class="boton boton--primario">
+            </div>
+  
+            <div class="contact-form-loader none">
+              <img src="img/oval.svg" alt="loading">
+            </div>
+    
+             
+            <div class="contact-form-response none">
+              <p>Los datos han sido enviados</p>
+            </div>
+        </form>
+  
+       
   
   
   
