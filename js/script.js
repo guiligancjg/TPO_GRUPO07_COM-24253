@@ -150,7 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://backend-grupo07-c-24253.onrender.com/menus/')
+    fetch('https://backend-grupo07-c-24253.onrender.com/menus/', {
+        mode: 'no-cors'
+    })
         .then(response => response.json())
         .then(menus => {
             const container = document.querySelector('.pedidosUsuario');
