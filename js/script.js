@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:3000/menus/')
+    fetch('https://backend-grupo07-c-24253.onrender.com/menus/')
         .then(response => response.json())
         .then(menus => {
             const container = document.querySelector('.pedidosUsuario');
